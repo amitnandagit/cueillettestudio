@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Picking Studio - Excellence in mobile app development, websites, AI, and UI/UX design.">
+  <title>Picking Studio | Smart Tech Solutions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #fdfdfd;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .text-gradient {
+      background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .bg-gradient-soft {
+      background: radial-gradient(circle at top right, #f0fdfa, transparent), radial-gradient(circle at bottom left, #f5f3ff, transparent);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease-out;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card-hover {
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.05);
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-10px);
+      }
+
+      100% {
+        transform: translateY(0px);
+      }
+    }
+
+    .animate-float {
+      animation: float 4s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-soft text-slate-900 overflow-x-hidden">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 px-6 py-4">
+    <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-3 flex items-center justify-between shadow-sm">
+      <div class="flex items-center gap-2">
+        <div class="bg-teal-600 p-2 rounded-lg">
+          <i data-lucide="leaf" class="text-white w-5 h-5"></i>
+        </div>
+        <span class="text-xl font-extrabold tracking-tight text-slate-800">Picking <span
+            class="text-teal-600">Studio</span></span>
+      </div>
+
+      <div class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+        <a href="#services" class="hover:text-teal-600 transition-colors">Services</a>
+        <a href="#portfolio" class="hover:text-teal-600 transition-colors">Projects</a>
+        <a href="#about" class="hover:text-teal-600 transition-colors">The Agency</a>
+        <a href="#blog" class="hover:text-teal-600 transition-colors">Insights</a>
+      </div>
+
+      <a href="#contact"
+        class="bg-slate-900 text-white px-6 py-2.5 rounded-xl font-semibold hover:bg-teal-700 transition-all shadow-md hover:shadow-teal-200/50">
+        Launch a project
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative pt-40 pb-20 px-6">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+      <div class="reveal">
+        <div
+          class="inline-flex items-center gap-2 bg-teal-50 text-teal-700 px-4 py-1.5 rounded-full text-sm font-bold mb-6 border border-teal-100">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-teal-500"></span>
+          </span>
+          Digital Solutions Designed for Growth
+        </div>
+        <h1 class="text-5xl lg:text-7xl font-extrabold text-slate-900 leading-[1.1] mb-8">
+          Reap the fruits of <span class="text-gradient">digital innovation.</span>
+        </h1>
+        <p class="text-xl text-slate-600 leading-relaxed mb-10 max-w-xl">
+          We engineer smart, scalable tech solutions from mobile apps to artificial intelligence, helping businesses
+          grow, connect, and succeed in the digital era.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <button
+            class="flex items-center gap-2 bg-teal-600 text-white px-8 py-4 rounded-2xl font-bold text-lg hover:bg-teal-700 transition-all shadow-lg shadow-teal-600/20">
+            Book a consultation
+            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+          </button>
+          <div class="flex -space-x-3 items-center ml-4">
+            <img src="https://i.pravatar.cc/150?img=32" class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+              alt="Client">
+            <img src="https://i.pravatar.cc/150?img=12" class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+              alt="Client">
+            <img src="https://i.pravatar.cc/150?img=48" class="w-12 h-12 rounded-full border-4 border-white shadow-sm"
+              alt="Client">
+            <div class="pl-6 py-1">
+              <p class="text-sm font-bold text-slate-800">100% Delivery</p>
+              <p class="text-xs text-slate-500">Based on 50+ projects</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="relative reveal delay-200">
+        <div
+          class="absolute -z-10 top-0 right-0 w-72 h-72 bg-teal-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse">
+        </div>
+        <div
+          class="absolute -z-10 bottom-0 left-0 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse delay-700">
+        </div>
+        <div class="bg-white p-4 rounded-[2.5rem] shadow-2xl rotate-2 animate-float">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+            alt="Dashboard Design" class="rounded-[2rem]">
+        </div>
+        <div class="absolute -bottom-6 -left-6 glass p-6 rounded-2xl shadow-xl max-w-[200px] -rotate-3">
+          <div class="flex items-center gap-3 mb-2">
+            <div class="p-2 bg-emerald-100 rounded-lg"><i data-lucide="trending-up"
+                class="text-emerald-600 w-5 h-5"></i></div>
+            <span class="font-bold text-slate-800">+140%</span>
+          </div>
+          <p class="text-xs text-slate-500 font-medium">Average user engagement growth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section id="services" class="py-24 px-6 bg-white/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20 reveal">
+        <h2 class="text-teal-600 font-bold uppercase tracking-widest text-sm mb-4">Our Expertise</h2>
+        <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6">Drivers of growth</h3>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto">A holistic approach mixing cutting-edge engineering and
+          functional aesthetics.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- App Dev -->
+        <div class="card-hover bg-white p-8 rounded-3xl border border-slate-100 reveal">
+          <div class="w-14 h-14 bg-teal-50 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="smartphone" class="text-teal-600 w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">Mobile Apps</h4>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">Native iOS and Android apps with unmatched performance
+            to engage your customers anywhere.</p>
+          <a href="#" class="text-teal-600 font-bold text-sm inline-flex items-center gap-1 group">
+            Discover <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- Web Dev -->
+        <div class="card-hover bg-white p-8 rounded-3xl border border-slate-100 reveal delay-100">
+          <div class="w-14 h-14 bg-indigo-50 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="code-2" class="text-indigo-600 w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">Web Platforms</h4>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">Ultra-fast, SEO-optimized websites designed to convert
+            every visitor into an ambassador.</p>
+          <a href="#" class="text-indigo-600 font-bold text-sm inline-flex items-center gap-1 group">
+            Discover <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- AI -->
+        <div class="card-hover bg-white p-8 rounded-3xl border border-slate-100 reveal delay-200">
+          <div class="w-14 h-14 bg-amber-50 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="sparkles" class="text-amber-600 w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">AI Solutions</h4>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">Automate your processes and personalize the customer
+            experience using artificial intelligence.</p>
+          <a href="#" class="text-amber-600 font-bold text-sm inline-flex items-center gap-1 group">
+            Discover <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <!-- UI/UX -->
+        <div class="card-hover bg-white p-8 rounded-3xl border border-slate-100 reveal delay-300">
+          <div class="w-14 h-14 bg-rose-50 rounded-2xl flex items-center justify-center mb-6">
+            <i data-lucide="palette" class="text-rose-600 w-7 h-7"></i>
+          </div>
+          <h4 class="text-xl font-bold text-slate-900 mb-3">UI/UX Design</h4>
+          <p class="text-slate-500 text-sm leading-relaxed mb-6">The art of making technology invisible in favor of
+            emotion and usability.</p>
+          <a href="#" class="text-rose-600 font-bold text-sm inline-flex items-center gap-1 group">
+            Discover <i data-lucide="chevron-right" class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects / Portfolio -->
+  <section id="portfolio" class="py-24 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+        <div>
+          <h2 class="text-teal-600 font-bold uppercase tracking-widest text-sm mb-4">Our Work</h2>
+          <h3 class="text-4xl font-extrabold text-slate-900">Projects that stand out.</h3>
+        </div>
+        <a href="#" class="mt-4 md:mt-0 text-slate-900 font-bold border-b-2 border-teal-600 pb-1">View all projects</a>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-12">
+        <div class="group cursor-pointer reveal">
+          <div class="relative overflow-hidden rounded-[2rem] bg-slate-100 aspect-[16/10] mb-6">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Project">
+            <div
+              class="absolute inset-0 bg-teal-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                <i data-lucide="eye" class="text-teal-600 w-6 h-6"></i>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-teal-600 font-bold text-xs uppercase tracking-tighter mb-2 block">Fintech • Mobile
+                App</span>
+              <h4 class="text-2xl font-bold text-slate-900">ReturnEase Platform</h4>
+            </div>
+            <p class="text-slate-500 max-w-[200px] text-sm italic">"A revolution in retail returns management."</p>
+          </div>
+        </div>
+
+        <div class="group cursor-pointer reveal delay-200">
+          <div class="relative overflow-hidden rounded-[2rem] bg-slate-100 aspect-[16/10] mb-6">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1000"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" alt="Project">
+            <div
+              class="absolute inset-0 bg-indigo-900/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-2xl">
+                <i data-lucide="eye" class="text-indigo-600 w-6 h-6"></i>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-between items-start">
+            <div>
+              <span class="text-indigo-600 font-bold text-xs uppercase tracking-tighter mb-2 block">AI • SaaS</span>
+              <h4 class="text-2xl font-bold text-slate-900">MillionLogics AI</h4>
+            </div>
+            <p class="text-slate-500 max-w-[200px] text-sm italic">"Intelligent automation designed for SMEs."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid (Secondary) -->
+  <section class="py-12 px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="group cursor-pointer reveal">
+          <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-100 card-hover h-full flex flex-col">
+            <div class="relative overflow-hidden rounded-2xl bg-slate-100 aspect-video mb-6">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Web Upgrade: SEO & Speed</h4>
+            <p class="text-sm text-slate-500 flex-grow">Improved visibility and performance for a major e-commerce
+              website.</p>
+          </div>
+        </div>
+
+        <div class="group cursor-pointer reveal delay-100">
+          <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-100 card-hover h-full flex flex-col">
+            <div class="relative overflow-hidden rounded-2xl bg-slate-100 aspect-video mb-6">
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Photography On-Demand</h4>
+            <p class="text-sm text-slate-500 flex-grow">A custom solution for booking professional photographers
+              instantly.</p>
+          </div>
+        </div>
+
+        <div class="group cursor-pointer reveal delay-200">
+          <div class="bg-white rounded-3xl p-4 shadow-sm border border-slate-100 card-hover h-full flex flex-col">
+            <div class="relative overflow-hidden rounded-2xl bg-slate-100 aspect-video mb-6">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            </div>
+            <h4 class="font-bold text-xl text-slate-900 mb-2">Returns Ecosystem</h4>
+            <p class="text-sm text-slate-500 flex-grow">Smart and automated returns management system for consumers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section id="about" class="py-24 px-6 bg-slate-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto relative z-10 w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <!-- Left Side -->
+        <div class="reveal">
+          <div
+            class="inline-block bg-[#1e293b] text-blue-400 font-bold uppercase tracking-widest text-[10px] px-3 py-1 rounded mb-6 border border-white/5">
+            Why Choose Us?</div>
+          <h3 class="text-4xl md:text-5xl font-extrabold mb-10 leading-[1.15]">Technology at the service of <span
+              class="text-teal-400 italic">your success.</span></h3>
+          <div class="space-y-6">
+            <div class="flex gap-4 items-start group">
+              <div
+                class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 group-hover:border-teal-500/30 transition-colors">
+                <i data-lucide="bar-chart" class="text-teal-400 w-5 h-5"></i>
+              </div>
+              <div class="pt-0.5">
+                <h4 class="font-bold mb-1 text-slate-100 text-sm">Proven Results in Software Development</h4>
+                <p class="text-slate-400 text-xs leading-relaxed max-w-sm">With over 5 years of experience, we have
+                  successfully completed 50+ projects for 30+ clients, with a 100% on-time delivery rate.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start group">
+              <div
+                class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 group-hover:border-teal-500/30 transition-colors">
+                <i data-lucide="cpu" class="text-teal-400 w-5 h-5"></i>
+              </div>
+              <div class="pt-0.5">
+                <h4 class="font-bold mb-1 text-slate-100 text-sm">Cutting-Edge Technologies</h4>
+                <p class="text-slate-400 text-xs leading-relaxed max-w-sm">We use advanced technologies like React
+                  Native, Node.js, Flutter, and AI frameworks to develop secure and scalable solutions.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start group">
+              <div
+                class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 group-hover:border-teal-500/30 transition-colors">
+                <i data-lucide="message-square" class="text-teal-400 w-5 h-5"></i>
+              </div>
+              <div class="pt-0.5">
+                <h4 class="font-bold mb-1 text-slate-100 text-sm">Transparent Communication</h4>
+                <p class="text-slate-400 text-xs leading-relaxed max-w-sm">We ensure open communication with daily
+                  updates and 24/7 support to guarantee transparency throughout your project.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start group">
+              <div
+                class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 group-hover:border-teal-500/30 transition-colors">
+                <i data-lucide="shield-check" class="text-teal-400 w-5 h-5"></i>
+              </div>
+              <div class="pt-0.5">
+                <h4 class="font-bold mb-1 text-slate-100 text-sm">Security-Driven Process</h4>
+                <p class="text-slate-400 text-xs leading-relaxed max-w-sm">Our methodologies include SSL encryption,
+                  data protection, and rigorous testing to ensure reliable and secure products.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start group">
+              <div
+                class="w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center flex-shrink-0 group-hover:bg-teal-500/20 group-hover:border-teal-500/30 transition-colors">
+                <i data-lucide="users" class="text-teal-400 w-5 h-5"></i>
+              </div>
+              <div class="pt-0.5">
+                <h4 class="font-bold mb-1 text-slate-100 text-sm">Dedicated Internal Team</h4>
+                <p class="text-slate-400 text-xs leading-relaxed max-w-sm">Our in-house team of expert developers and
+                  designers apply agile methods to deliver high-performance digital solutions.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Staggered animated grid -->
+        <div class="relative z-10 w-full h-full flex items-center justify-center reveal delay-300">
+          <div
+            class="absolute inset-0 flex items-start justify-end opacity-[0.03] pointer-events-none -translate-y-24 translate-x-12">
+            <i data-lucide="leaf" class="w-[32rem] h-[32rem] text-white"></i>
+          </div>
+
+          <div class="flex gap-5 relative w-full max-w-lg mx-auto">
+            <!-- Left Column -->
+            <div class="flex flex-col gap-5 w-1/2 transform transition-transform animate-float hover:scale-[1.02]">
+              <div
+                class="bg-[#1e293b]/70 backdrop-blur-md border border-white/5 rounded-3xl p-8 hover:bg-[#1e293b]/90 transition-colors shadow-2xl flex flex-col items-center justify-center aspect-[5/4]">
+                <p class="text-4xl font-extrabold text-teal-400 mb-2">50+</p>
+                <p class="text-white text-[10px] text-center font-medium tracking-wide">Projects Delivered</p>
+              </div>
+              <div
+                class="bg-[#1e293b]/70 backdrop-blur-md border border-white/5 rounded-3xl p-8 hover:bg-[#1e293b]/90 transition-colors shadow-2xl flex flex-col items-center justify-center aspect-[5/4] relative z-10">
+                <!-- Inner drop shadow mimicking overlapping transparency -->
+                <div
+                  class="absolute -top-[10px] left-1/2 -translate-x-1/2 w-[85%] h-[20px] bg-[#0f172a]/50 rounded-[100%] blur-[4px] -z-10 pointer-events-none">
+                </div>
+                <p class="text-4xl font-extrabold text-teal-400 mb-2">5+</p>
+                <p class="text-white text-[10px] text-center font-medium tracking-wide">Years of Expertise</p>
+              </div>
+            </div>
+            <!-- Right Column (Offset Downward) -->
+            <div class="flex flex-col gap-5 w-1/2 mt-12 transform transition-transform animate-float hover:scale-[1.02]"
+              style="animation-delay: 1.5s;">
+              <div
+                class="bg-[#1e293b]/70 backdrop-blur-md border border-white/5 rounded-3xl p-8 hover:bg-[#1e293b]/90 transition-colors shadow-2xl flex flex-col items-center justify-center aspect-[5/4]">
+                <p class="text-4xl font-extrabold text-teal-400 mb-2">30+</p>
+                <p class="text-white text-[10px] text-center font-medium tracking-wide">Happy Clients</p>
+              </div>
+              <div
+                class="bg-[#1e293b]/70 backdrop-blur-md border border-white/5 rounded-3xl p-8 hover:bg-[#1e293b]/90 transition-colors shadow-2xl flex flex-col items-center justify-center aspect-[5/4] relative z-10">
+                <div
+                  class="absolute -top-[10px] left-1/2 -translate-x-1/2 w-[85%] h-[20px] bg-[#0f172a]/50 rounded-[100%] blur-[4px] -z-10 pointer-events-none">
+                </div>
+                <p class="text-4xl font-extrabold text-teal-400 mb-2">24/7</p>
+                <p class="text-white text-[10px] text-center font-medium tracking-wide">Support & Assistance</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 overflow-hidden bg-slate-50/50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16 reveal">
+        <h2 class="text-teal-600 font-bold uppercase tracking-widest text-sm mb-4">What our clients say</h2>
+        <h3 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">Trusted by businesses worldwide.</h3>
+      </div>
+    </div>
+
+    <style>
+      .marquee-container {
+        display: flex;
+        overflow: hidden;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
+        padding-bottom: 2rem;
+      }
+
+      .marquee-content {
+        display: flex;
+        gap: 2rem;
+        padding-left: 2rem;
+        animation: marquee 50s linear infinite;
+        min-width: max-content;
+      }
+
+      .marquee-container:hover .marquee-content {
+        animation-play-state: paused;
+      }
+
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .review-card {
+        width: 380px;
+        flex-shrink: 0;
+      }
+
+      @media (max-width: 768px) {
+        .review-card {
+          width: 320px;
+        }
+      }
+    </style>
+
+    <div class="marquee-container cursor-grab active:cursor-grabbing">
+      <div class="marquee-content reveal">
+
+        <!-- Group 1 -->
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"We entrusted our mobile app to Picking Studio, and they
+            perfectly met our expectations. The app works great, and our users love it!"</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=sarah" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Sarah Johnson">
+            <div>
+              <p class="font-bold text-slate-900">Sarah Johnson</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"Working with Picking Studio on our website was an
+            excellent decision. They understood our brand well and created a modern, fast, and clean site."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=mark" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Mark Davis">
+            <div>
+              <p class="font-bold text-slate-900">Mark Davis</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"The UI/UX design they delivered gives our product a
+            real premium feel. It's simple, beautiful, and our users find it very easy to use."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=lisa" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Lisa Chen">
+            <div>
+              <p class="font-bold text-slate-900">Lisa Chen</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"We added AI functionalities to our platform thanks to
+            Picking Studio, and it truly made a difference. The team is highly competent."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=david" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="David Wilson">
+            <div>
+              <p class="font-bold text-slate-900">David Wilson</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"From start to finish, the project was well organized.
+            The Picking team was attentive, professional, and always responsive to our needs."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=emma" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Emma Rodriguez">
+            <div>
+              <p class="font-bold text-slate-900">Emma Rodriguez</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"The integration of AI into our backend systems was
+            seamless. Picking Studio delivered exactly what we needed to scale our operations securely."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=james" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="James Smith">
+            <div>
+              <p class="font-bold text-slate-900">James Smith</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"From the first meeting to the final launch, their
+            transparent process and daily updates made us feel confident. Highly recommend for any serious web project."
+          </p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=clara" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Clara Dupont">
+            <div>
+              <p class="font-bold text-slate-900">Clara Dupont</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"Their mobile app development is truly top-tier. Fast,
+            responsive, and a native feel that our users continue to praise."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=thomas" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Thomas Richard">
+            <div>
+              <p class="font-bold text-slate-900">Thomas Richard</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- DUPLICATE Group 1 for seamless scroll -->
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"We entrusted our mobile app to Picking Studio, and they
+            perfectly met our expectations. The app works great, and our users love it!"</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=sarah" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Sarah Johnson">
+            <div>
+              <p class="font-bold text-slate-900">Sarah Johnson</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"Working with Picking Studio on our website was an
+            excellent decision. They understood our brand well and created a modern, fast, and clean site."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=mark" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Mark Davis">
+            <div>
+              <p class="font-bold text-slate-900">Mark Davis</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"The UI/UX design they delivered gives our product a
+            real premium feel. It's simple, beautiful, and our users find it very easy to use."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=lisa" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Lisa Chen">
+            <div>
+              <p class="font-bold text-slate-900">Lisa Chen</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"We added AI functionalities to our platform thanks to
+            Picking Studio, and it truly made a difference. The team is highly competent."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=david" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="David Wilson">
+            <div>
+              <p class="font-bold text-slate-900">David Wilson</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"From start to finish, the project was well organized.
+            The Picking team was attentive, professional, and always responsive to our needs."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=emma" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Emma Rodriguez">
+            <div>
+              <p class="font-bold text-slate-900">Emma Rodriguez</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"The integration of AI into our backend systems was
+            seamless. Picking Studio delivered exactly what we needed to scale our operations securely."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=james" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="James Smith">
+            <div>
+              <p class="font-bold text-slate-900">James Smith</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"From the first meeting to the final launch, their
+            transparent process and daily updates made us feel confident. Highly recommend for any serious web project."
+          </p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=clara" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Clara Dupont">
+            <div>
+              <p class="font-bold text-slate-900">Clara Dupont</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="glass p-8 rounded-3xl review-card flex flex-col bg-white shadow-sm hover:shadow-xl transition-shadow duration-300">
+          <div class="flex text-amber-400 mb-6">
+            <i data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i><i data-lucide="star" class="fill-current w-4 h-4"></i><i
+              data-lucide="star" class="fill-current w-4 h-4"></i><i data-lucide="star"
+              class="fill-current w-4 h-4"></i>
+          </div>
+          <p class="text-slate-600 leading-relaxed mb-8 italic">"Their mobile app development is truly top-tier. Fast,
+            responsive, and a native feel that our users continue to praise."</p>
+          <div class="flex items-center gap-4 mt-auto">
+            <img src="https://i.pravatar.cc/150?u=thomas" class="w-12 h-12 rounded-full border-2 border-slate-100"
+              alt="Thomas Richard">
+            <div>
+              <p class="font-bold text-slate-900">Thomas Richard</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-24 px-6 bg-slate-50/50">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+        <div>
+          <h2 class="text-teal-600 font-bold uppercase tracking-widest text-sm mb-4">Insights & News</h2>
+          <h3 class="text-4xl font-extrabold text-slate-900">Our digital vision.</h3>
+        </div>
+        <a href="#" class="mt-4 md:mt-0 text-slate-900 font-bold border-b-2 border-teal-600 pb-1">View all articles</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="card-hover bg-white rounded-3xl p-4 shadow-sm border border-slate-100 reveal flex flex-col">
+          <div class="aspect-video rounded-2xl bg-slate-100 mb-6 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&q=80&w=800"
+              class="w-full h-full object-cover" alt="Blog">
+            <div
+              class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-teal-700">
+              Mobile</div>
+          </div>
+          <div class="px-2 pb-4 flex flex-col flex-grow">
+            <h4 class="font-bold text-xl text-slate-900 mb-3">Why Restaurants Need Their Own Mobile App</h4>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Discover why having a native mobile presence is essential
+              to build loyalty and accelerate your growth in 2026.</p>
+            <a href="#" class="text-slate-900 font-bold text-sm inline-flex items-center gap-1 group w-max">
+              Read article <i data-lucide="arrow-right"
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="card-hover bg-white rounded-3xl p-4 shadow-sm border border-slate-100 reveal delay-100 flex flex-col">
+          <div class="aspect-video rounded-2xl bg-slate-100 mb-6 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&q=80&w=800"
+              class="w-full h-full object-cover" alt="Blog">
+            <div
+              class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-indigo-700">
+              E-Commerce</div>
+          </div>
+          <div class="px-2 pb-4 flex flex-col flex-grow">
+            <h4 class="font-bold text-xl text-slate-900 mb-3">On-Demand Apps: Opportunities for Startups</h4>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">Today, convenience is a key factor in consumer behavior. A
+              complete guide to modern on-demand applications.</p>
+            <a href="#" class="text-slate-900 font-bold text-sm inline-flex items-center gap-1 group w-max">
+              Read article <i data-lucide="arrow-right"
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="card-hover bg-white rounded-3xl p-4 shadow-sm border border-slate-100 reveal delay-200 flex flex-col">
+          <div class="aspect-video rounded-2xl bg-slate-100 mb-6 overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800"
+              class="w-full h-full object-cover" alt="Blog">
+            <div
+              class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-rose-700">
+              Business</div>
+          </div>
+          <div class="px-2 pb-4 flex flex-col flex-grow">
+            <h4 class="font-bold text-xl text-slate-900 mb-3">How Small Businesses Can Benefit from AI</h4>
+            <p class="text-sm text-slate-500 mb-6 flex-grow">AI is no longer reserved for tech giants. How SMEs can use
+              the digital ecosystem to multiply their revenue.</p>
+            <a href="#" class="text-slate-900 font-bold text-sm inline-flex items-center gap-1 group w-max">
+              Read article <i data-lucide="arrow-right"
+                class="w-4 h-4 transition-transform group-hover:translate-x-1"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="py-24 px-6 bg-[#eafdf6] relative overflow-hidden">
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="text-center mb-10 reveal">
+        <h3 class="text-3xl lg:text-4xl font-extrabold text-teal-600 mb-4">Assessments and Certificates</h3>
+        <p class="text-slate-500 max-w-2xl mx-auto">Trusted by clients worldwide with industry-recognized
+          certifications.</p>
+      </div>
+
+      <!-- Top Stats Bar -->
+      <div
+        class="bg-white rounded-3xl py-10 px-6 flex flex-col md:flex-row justify-around items-center text-center shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] mb-12 reveal delay-100">
+        <div class="flex-1 w-full p-4">
+          <p class="text-3xl font-extrabold text-slate-900 mb-1">4.9/5</p>
+          <p class="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Client Satisfaction</p>
+        </div>
+        <div class="hidden md:block w-px h-12 bg-slate-100"></div>
+        <div class="flex-1 w-full p-4 border-t md:border-t-0 border-slate-100">
+          <p class="text-3xl font-extrabold text-emerald-500 mb-1">98%</p>
+          <p class="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Success Rate<br><span
+              class="text-[10px] text-slate-400 opacity-60">On 20+ projects</span></p>
+        </div>
+        <div class="hidden md:block w-px h-12 bg-slate-100"></div>
+        <div class="flex-1 w-full p-4 border-t md:border-t-0 border-slate-100">
+          <p class="text-3xl font-extrabold text-slate-900 mb-1">2h</p>
+          <p class="text-[11px] uppercase tracking-wider font-semibold text-slate-400">Average Response Time<br><span
+              class="text-[10px] text-slate-400 opacity-60">Client support</span></p>
+        </div>
+      </div>
+
+      <!-- Bottom Certificates Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <!-- Google -->
+        <div
+          class="bg-white p-8 rounded-3xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] reveal delay-200 hover:-translate-y-2 transition-transform duration-300">
+          <div
+            class="w-16 h-16 mx-auto bg-[#3b82f6] rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-blue-500/20">
+          </div>
+          <p class="text-sm font-bold text-slate-900 mb-1">Google Developer</p>
+          <p class="text-[10px] uppercase font-semibold text-slate-400 tracking-wide">Certified Partner</p>
+        </div>
+        <!-- ISO -->
+        <div
+          class="bg-white p-8 rounded-3xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] reveal delay-300 hover:-translate-y-2 transition-transform duration-300">
+          <div
+            class="w-16 h-16 mx-auto bg-[#a855f7] rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-purple-500/20">
+          </div>
+          <p class="text-sm font-bold text-slate-900 mb-1">ISO 9001</p>
+          <p class="text-[10px] uppercase font-semibold text-slate-400 tracking-wide">Quality Management</p>
+        </div>
+        <!-- Clutch -->
+        <div
+          class="bg-white p-8 rounded-3xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] reveal delay-400 hover:-translate-y-2 transition-transform duration-300">
+          <div
+            class="w-16 h-16 mx-auto bg-[#f97316] rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-orange-500/20">
+          </div>
+          <p class="text-sm font-bold text-slate-900 mb-1">Clutch Verified</p>
+          <p class="text-[10px] uppercase font-semibold text-slate-400 tracking-wide">Top Developer</p>
+        </div>
+        <!-- Award -->
+        <div
+          class="bg-white p-8 rounded-3xl shadow-[0_10px_30px_-15px_rgba(0,0,0,0.05)] reveal delay-500 hover:-translate-y-2 transition-transform duration-300">
+          <div
+            class="w-16 h-16 mx-auto bg-[#22c55e] rounded-2xl mb-6 flex items-center justify-center shadow-lg shadow-emerald-500/20">
+          </div>
+          <p class="text-sm font-bold text-slate-900 mb-1">Excellence Award</p>
+          <p class="text-[10px] uppercase font-semibold text-slate-400 tracking-wide">Tech Innovation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="contact" class="py-24 px-6 relative overflow-hidden flex justify-center items-center">
+    <!-- Premium Dark Glassmorphism Background -->
+    <div class="absolute inset-0 bg-slate-900">
+      <!-- Ambient animated glows -->
+      <div
+        class="absolute top-1/2 left-1/4 w-[30rem] h-[30rem] bg-teal-500 rounded-full mix-blend-screen filter blur-[128px] opacity-40 animate-pulse -translate-y-1/2">
+      </div>
+      <div
+        class="absolute top-1/2 right-1/4 w-[30rem] h-[30rem] bg-indigo-500 rounded-full mix-blend-screen filter blur-[128px] opacity-40 animate-pulse -translate-y-1/2 -translate-x-1/3 delay-300">
+      </div>
+    </div>
+
+    <div
+      class="max-w-4xl w-full relative z-10 bg-white/10 backdrop-blur-2xl p-12 md:p-20 rounded-[3rem] border border-white/20 text-center reveal shadow-[0_30px_80px_-15px_rgba(0,0,0,0.4)]">
+      <h2 class="text-4xl md:text-6xl font-extrabold text-white mb-8 leading-tight tracking-tight">
+        Let's start building <br>your <span
+          class="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-300">digital future.</span>
+      </h2>
+      <p class="text-xl text-slate-300 mb-12 max-w-xl mx-auto font-medium">
+        An idea? A project? A business problem? Our experts will answer you in <span
+          class="text-white border-b border-teal-400 pb-0.5">less than 2 hours.</span>
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+        <a href="mailto:info@cueillettestudio.fr"
+          class="flex items-center justify-center gap-3 w-full sm:w-auto bg-teal-500 hover:bg-teal-400 text-slate-900 px-10 py-5 rounded-2xl font-bold hover:-translate-y-1 hover:shadow-[0_20px_40px_-10px_rgba(20,184,166,0.4)] transition-all duration-300 text-lg">
+          <i data-lucide="mail" class="w-6 h-6"></i> info@cueillettestudio.fr
+        </a>
+        <a href="tel:+33667330554"
+          class="flex items-center justify-center gap-3 w-full sm:w-auto bg-white/5 hover:bg-white/10 text-white border border-white/20 px-10 py-5 rounded-2xl font-bold hover:-translate-y-1 hover:shadow-xl transition-all duration-300 text-lg">
+          <i data-lucide="phone" class="w-6 h-6 text-teal-400"></i> +33 6 67 33 05 54
+        </a>
+      </div>
+      <p class="mt-12 text-slate-400 text-sm font-medium flex items-center justify-center gap-2">
+        <i data-lucide="map-pin" class="w-4 h-4 text-teal-400 opacity-70"></i> Gouesnach, France • Global Presence
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="pt-20 pb-10 px-6 border-t border-slate-100 bg-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-4 gap-12 mb-20">
+      <div class="col-span-2">
+        <div class="flex items-center gap-2 mb-6">
+          <div class="bg-teal-600 p-2 rounded-lg">
+            <i data-lucide="leaf" class="text-white w-5 h-5"></i>
+          </div>
+          <span class="text-xl font-extrabold tracking-tight text-slate-800">Picking <span
+              class="text-teal-600">Studio</span></span>
+        </div>
+        <p class="text-slate-500 max-w-sm leading-relaxed mb-8">We engineer smart, scalable tech solutions from mobile
+          apps to AI to help businesses grow, connect, and succeed in the digital era.</p>
+        <div class="flex gap-4">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-teal-600 hover:bg-teal-50 transition-all"><i
+              data-lucide="linkedin" class="w-5 h-5"></i></a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-teal-600 hover:bg-teal-50 transition-all"><i
+              data-lucide="twitter" class="w-5 h-5"></i></a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center text-slate-400 hover:text-teal-600 hover:bg-teal-50 transition-all"><i
+              data-lucide="instagram" class="w-5 h-5"></i></a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-slate-900 mb-6">Company</h4>
+        <ul class="space-y-4 text-slate-500 font-medium">
+          <li><a href="#" class="hover:text-teal-600">Home</a></li>
+          <li><a href="#" class="hover:text-teal-600">About</a></li>
+          <li><a href="#" class="hover:text-teal-600">Portfolio</a></li>
+          <li><a href="#" class="hover:text-teal-600">Insights & Blogs</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-bold text-slate-900 mb-6">Services</h4>
+        <ul class="space-y-4 text-slate-500 font-medium">
+          <li><a href="#" class="hover:text-teal-600">AI Development</a></li>
+          <li><a href="#" class="hover:text-teal-600">UI/UX Design</a></li>
+          <li><a href="#" class="hover:text-teal-600">Web Development</a></li>
+          <li><a href="#" class="hover:text-teal-600">Mobile App Development</a></li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="max-w-7xl mx-auto border-t border-slate-50 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-400 font-medium">
+      <p>© 2026 Picking Studio. All rights reserved.</p>
+      <div class="flex gap-8">
+        <span>Google Cloud Partner</span>
+        <span>ISO 9001 Certified</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealOnScroll = () => {
+      revealElements.forEach(el => {
+        const elementTop = el.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+        if (elementTop < windowHeight - 50) {
+          el.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
